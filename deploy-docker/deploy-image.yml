@@ -1,8 +1,8 @@
 ---
-- name: pulling docker imahge
+- name: Pulling docker image of calculator
   hosts: all
   tasks:
-    - name: pull docker image
-      docker image:
+    - name: Pull calculator image
+      docker_image:
         name: ripunjay25/calculator
         source: pull
