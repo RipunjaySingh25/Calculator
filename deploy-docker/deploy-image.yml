@@ -1,0 +1,8 @@
+---
+- name: pulling docker imahge
+  hosts: all
+  tasks:
+    - name: pull docker image
+      docker image:
+        name: ripunjay25/calculator
+        source: pull
