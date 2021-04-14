@@ -1,10 +1,13 @@
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-//import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
+//import java.util.InputMismatchException;
+
 public class Calculator {
-    private static final Logger logger = LogManager.getLogger(Calculator.class);
+    private static final Logger loggercls = LogManager.getLogger(Calculator.class);
 
     public Calculator() {
     }
@@ -66,39 +69,39 @@ public class Calculator {
 
     public double powofnum(double number1,double number2) {
         double result = 0;
-        logger.info("[powerofnum] : (" + number1 +","+number2+")");
+        loggercls.info("Calculating power function of given numbers:" + number1+","+number2);
+        loggercls.info("Resultant answer of power operation is : " + Math.pow(number1, number2));
         result = Math.pow(number1,number2);
-        logger.info("[RESULT - powerofnum] : " + result);
         return result;
     }
 
     public double Factorial(double number1) {
         double result = 1;
         int i;
-        logger.info("[Factorial] : " + number1);
+        loggercls.info("Calculating factorial  of given number:" + number1);
         if (number1 < 0||number1!=(int)number1)
             result = Double.NaN;
         else
             for (i = 1; i <= number1; i++) {
                 result = result * i;
             }
-        logger.info("[Result - Factorial] : " + result);
+        loggercls.info("Resultant answer of power operations is : " + result);
         return result;
     }
 
     public double naturallog(double number1) {
-        logger.info("[natural log] : " + number1);
+        loggercls.info("Calculating natural log  of given number:" + number1);
+        loggercls.info("Resultant answer of natural log operation is : " + Math.log(number1));
         double result = 0;
         result = Math.log(number1);
-        logger.info("[RESULT - natural log] : " + result);
         return result;
     }
 
     public double squareroot(double number1) {
-        logger.info("[square root] : " + number1);
+        loggercls.info("Calculating square root  of given number:" + number1);
+        loggercls.info("Resultant answer of power operations is : " + Math.sqrt(number1));
         double result = 0;
         result = Math.sqrt(number1);
-        logger.info("[RESULT - square root] : " + result);
         return result;
     }
 
